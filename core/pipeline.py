@@ -19,11 +19,7 @@ class DataPipeline:
         self.chunker=DocumentChunker()
         self.uploader= None
     
-    async def initialize(self):
-        """Initialize async components"""
-        print(f"Initializing pipeline with collection :{self.collection_name}")
-        self.uploader=await QdrantUploader.create(client,self.collection_name,768)
-        print("Pipeline Succesfully Initialized")
+    
     
     async def process_file(self,file_path):
         parsed_doc=self.loader.convert_document(file_path)
