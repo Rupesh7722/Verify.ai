@@ -14,7 +14,7 @@ from langchain.text_splitter import MarkdownHeaderTextSplitter,MarkdownTextSplit
 import asyncio
 
 @dataclass
-class ChunkMetadata:
+
     """Metadata for each chunks"""
     doc_id: str
     chunk_id: str
