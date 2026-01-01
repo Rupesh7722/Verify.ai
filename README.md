@@ -64,10 +64,4 @@ Agentic Reasoning Layer
 Explainable Output + Audit Trail
 🚀 Use Cases
 
-Research & literature reviews
 
-Enterprise knowledge systems
-
-Compliance-aware AI
-
-AI-assisted reporting
