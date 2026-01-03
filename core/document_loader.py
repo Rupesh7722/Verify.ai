@@ -75,23 +75,3 @@ class DocumentLoader:
         return tables
 
     
-    def convert_document(self,file_path) -> ParsedDocument:
-        """Convert files to ParsedDocument"""
-        path=Path(file_path)
-        result=self.converter.convert(path)
-        content=result.document.export_to_markdown()
-        
-        return ParsedDocument(
-            doc_id=self.generate_doc_id(filepath=file_path),
-            source=file_path,
-            images=self.extract_images(result),
-            tables=self.extract_tables(result),
-            parsed_content=content
-        )
-    
-
-if __name__ == "__main__":
-    loader=DocumentLoader()
-    print("Starting Example Run")
-    res=loader.convert_document("/home/itzfranku/Aristo/2501.17887v1.pdf")
-    print(res)
