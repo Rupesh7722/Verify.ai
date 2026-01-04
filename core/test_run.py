@@ -26,13 +26,3 @@ print(converter)
 doc = converter.convert(source=source).document
 
 
-            
-          # Docling provides pictures through document.pictures
-if hasattr(doc, 'pictures'):
-    for pic_idx, picture in enumerate(doc.pictures):
-        image_info = {
-                        'image_id': pic_idx,
-                        'caption': picture.caption if hasattr(picture, 'caption') else '',
-                        'text': picture.text if hasattr(picture, 'text') else '',  # AI-generated description
-                    }
-        print(image_info)
