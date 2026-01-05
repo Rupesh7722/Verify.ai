@@ -1,4 +1,4 @@
-"""Handles uploading chunks to vector database"""
+
 
 from typing import List, Optional
 import uuid
